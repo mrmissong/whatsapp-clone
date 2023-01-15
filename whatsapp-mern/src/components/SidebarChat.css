@@ -12,6 +12,7 @@
     margin-bottom: 8px;
 }
 .sidebarChat_info{
+    display: flex;
     padding:-30px ;
     margin-left: 15px;
 }

@@ -3,7 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import Messages from "./models/Messages.js";
 import Pusher from "Pusher";
-
+import cors from "cors";
 //configuration
 const app = express();
 const port = process.env.PORT || 9000;
@@ -17,11 +17,12 @@ const pusher = new Pusher({
 
 //middleware
 app.use(express.json());
-app.use((req, res, next) => {
-	res.setHeader("Access-Control-Allow-Origin", "*");
-	res.setHeader("Access-Control-Allow-Headers", "*");
-	next();
-});
+app.use(cors());
+// app.use((req, res, next) => {
+// 	res.setHeader("Access-Control-Allow-Origin", "*");
+// 	res.setHeader("Access-Control-Allow-Headers", "*");
+// 	next();
+// });
 //mongodb
 mongoose.Promise = global.Promise;
 
@@ -44,9 +45,11 @@ db.once("open", () => {
 
 		if (change.operationType === "insert") {
 			const messageDetails = change.fullDocument;
-			pusher.trigger("message", "inserted", {
+			pusher.trigger("messages", "inserted", {
 				name: messageDetails.name,
 				message: messageDetails.message,
+				received: messageDetails.received,
+				timestamp: messageDetails.createdAt,
 			});
 		} else {
 			console.log("error triggering Pusher");
