@@ -17,7 +17,7 @@ function Chat({ messages }) {
 
 		await axios.post("/messages/new", {
 			message: input,
-			name: "Pablo",
+			name: "Naba",
 			received: false,
 		});
 		setInput("");
@@ -26,7 +26,7 @@ function Chat({ messages }) {
 		<div className="chat">
 			<div className="chat_header">
 				<IconButton>
-					<Avatar />
+					<Avatar src="https://i.imgur.com/mbvUqhu.jpg" />
 				</IconButton>
 				<div className="chat_headerInfo">
 					<h3>Pablo</h3>
