@@ -8,11 +8,14 @@
     background-color: #ebebeb;
 }
 .sidebarChat_info > h2{
+    margin-top: 16px;
     font-size: 16px;
     margin-bottom: 8px;
+    padding-right: 10px;
 }
 .sidebarChat_info{
-    display: flex;
+    margin-top: -10px;
+    display: block;
     padding:-30px ;
     margin-left: 15px;
 }

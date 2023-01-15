@@ -44,9 +44,21 @@ function Sidebar() {
 				</div>
 			</div>
 			<div className="sidebar_chats">
-				<SidebarChat />
-				<SidebarChat />
-				<SidebarChat />
+				<SidebarChat
+					source="https://i.imgur.com/MIq6NpV.jpg"
+					name="Ben"
+					message="  how was the show?"
+				/>
+				<SidebarChat
+					source="https://i.imgur.com/DAzFa15.jpg"
+					name="John"
+					message="  Ok. I sent it"
+				/>
+				<SidebarChat
+					source="https://i.imgur.com/2iNGklj.jpg"
+					name="Lois"
+					message="  Thanks!"
+				/>
 			</div>
 		</div>
 	);
