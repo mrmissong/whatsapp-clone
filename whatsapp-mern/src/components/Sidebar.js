@@ -13,7 +13,9 @@ function Sidebar() {
 	return (
 		<div className="sidebar">
 			<div className="sidebar_header">
-				<Avatar src="https://i.imgur.com/ONxzjfl.jpg" />
+				<IconButton>
+					<Avatar src="https://i.imgur.com/ONxzjfl.jpg" />
+				</IconButton>
 				<div className="sidebar_hederRight">
 					<IconButton>
 						<GroupsIcon />
