@@ -18,5 +18,5 @@ const wappSchema = mongoose.Schema(
 	{ timestamps: true }
 );
 
-const Messages = mongoose.model("Whatsapp messages", wappSchema);
+const Messages = mongoose.model("whatsappMessages", wappSchema);
 export default Messages;
