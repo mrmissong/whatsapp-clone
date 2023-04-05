@@ -1,16 +1,21 @@
 //imports
+import dotenv from "dotenv";
+
+if (process.env.NODE_ENV !== "production") {
+	dotenv.config();
+}
 import express from "express";
 import mongoose from "mongoose";
 import Messages from "./models/Messages.js";
-import Pusher from "Pusher";
+import Pusher from "pusher";
 import cors from "cors";
 //configuration
 const app = express();
 const port = process.env.PORT || 9000;
 const pusher = new Pusher({
-	appId: "1538723",
-	key: "534b82c071e3fe337bce",
-	secret: "ab6ff0f9e18070f578ad",
+	appId: process.env.appId,
+	key: process.env.key,
+	secret: process.env.secret,
 	cluster: "ap2",
 	useTLS: true,
 });
@@ -18,16 +23,12 @@ const pusher = new Pusher({
 //middleware
 app.use(express.json());
 app.use(cors());
-// app.use((req, res, next) => {
-// 	res.setHeader("Access-Control-Allow-Origin", "*");
-// 	res.setHeader("Access-Control-Allow-Headers", "*");
-// 	next();
-// });
+
 //mongodb
 mongoose.Promise = global.Promise;
 
 const dbURI =
-	"mongodb+srv://admin:mortyparty@whatsappcluster.abwpdsm.mongodb.net/test?retryWrites=true&w=majority";
+	"mongodb+srv://vscodemissong:mortyparty@mancode.ku2ubmu.mongodb.net/whatsapp-clone?retryWrites=true&w=majority";
 mongoose.connect(dbURI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,

@@ -59,6 +59,11 @@ function Sidebar() {
 					name="Lois"
 					message="  Thanks!"
 				/>
+				<SidebarChat
+					source="https://i.imgur.com/mbvUqhu.jpg"
+					name="Pablo"
+					message="  Thanks!"
+				/>
 			</div>
 		</div>
 	);
