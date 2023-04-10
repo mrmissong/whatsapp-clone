@@ -1,8 +1,8 @@
 
 
-# **URL Shortener**
+# **Whatsapp web**
 
-#### A simple url shortener using React
+#### A simple whatsapp web chat interface
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 
 ## DEMO
 
-[Url shortener demo](https://missong-url-shortner.netlify.app/)
+[Whatsapp web demo](https://missong-whatsapp-chat-clone.netlify.app/)
 
 
 
@@ -33,8 +33,13 @@ _npm start_
 ## Tech Stack
 
 - React
-- Axios
-- Bootstrap
+- Mongodb
+- Express
+- NodeJS
+- Render
+- Pusher
+- Netlify
+- MUI
 
 ## Authors
 
